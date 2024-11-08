@@ -1,0 +1,109 @@
+@media (max-width:700px){
+    .navsb, .nav{
+        display: none;
+    }
+    .burger{
+        width: 30px;
+        height: 4px;
+        background: white;
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+    .burger::before{
+        content: '';
+        width: 30px;
+        height: 4px;
+        background: white;
+        position: absolute;
+        display: block;
+        top: -10px;
+        transition: 0.5s;
+    }
+    .burger::after{
+        content: '';
+        width: 30px;
+        height: 4px;
+        background: white;
+        position: absolute;
+        display: block;
+        top: 10px;
+        transition: 0.5s;
+    }
+    .burger::after {
+        top: 10px;
+    }
+    
+    .burger.active {
+        background: none;
+    }
+    
+    .burger__box{
+        width: 80%;
+        background: #00000090;
+        position: fixed;
+        height: 100vh;
+        top: 70px;
+        display: none;
+        right: 0;
+    }
+    .burger__box.active{
+        display: block;
+    }
+    .nav.active{
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 400px;
+        left: 40%;
+        color: wheat;
+        font-size: 22px;
+    }
+    .navsb.active{
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 500px;
+        left: 40%;
+        font-size: 22px;
+    }
+    .header .burger {
+        right: 40px;
+        top: 30px;
+    }
+    .footer .burger {
+        position: fixed; 
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .burger.active{
+        background: none;
+    }
+    .burger.active::before{
+        top: 0;
+        transform: rotate(45deg);
+    }
+    .burger.active::after{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    .figury{
+        display: none;
+    }
+    .middleone {
+        display: none; 
+    }
+    .burger__box.active .middleone {
+        display: block;
+        padding: 20px;
+        text-align: center;
+    }
+    
+}
+@media (max-width:500px){
+    .container{
+        max-width: 500px;
+            
+    }
+}
